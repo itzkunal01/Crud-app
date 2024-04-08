@@ -50,13 +50,25 @@ if (button) {
     let fullName = document.getElementById("full-name").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
-    // Create user object
+
+    // Validate input fields
+    if (
+      fullName.trim() === "" ||
+      email.trim() === "" ||
+      password.trim() === ""
+    ) {
+      alert("Input fields required to fill.");
+      return; // prevent form submission if any field is empty
+    }
+
+    // (CREATE) user object
     let newUser = {
       name: fullName,
       email: email,
       password: password,
     };
-    // Send POST request to add new user
+
+    // (SEND) (POST) request to add new user
     fetch("http://localhost:5000/users", {
       method: "POST",
       headers: {
