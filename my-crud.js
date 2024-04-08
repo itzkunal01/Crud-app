@@ -25,7 +25,6 @@ let button = document.getElementById("submit");
 
 // Function to fetch users and render them
 function fetchUsers() {
-  // fetch("http://192.168.0.105:5000/users")
   fetch("http://localhost:5000/users")
     .then((response) => response.json())
     .then((data) => {
