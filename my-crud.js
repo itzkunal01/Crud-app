@@ -82,6 +82,10 @@ if (button) {
           alert("User added successfully!");
           // Fetch users to update the list
           fetchUsers();
+          // Clear input fields
+          document.getElementById("full-name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
         } else {
           // Show error alert
           alert("Failed to add user.");
