@@ -29,14 +29,18 @@ function fetchUsers() {
   fetch("http://localhost:5000/users")
     .then((response) => response.json())
     .then((data) => {
-      // Clear previous list items
-      ul.innerHTML = "";
-      // Render users
-      data.users.forEach((user) => {
-        let li = document.createElement("li");
-        li.textContent = user.name;
-        ul.appendChild(li);
-      });
+      //
+      if (data && data.users && data.users.length > 0) {
+        //
+        // Clear previous list items
+        ul.innerHTML = "";
+        // Render users
+        data.users.forEach((user) => {
+          let li = document.createElement("li");
+          li.textContent = user.name;
+          ul.appendChild(li);
+        });
+      } //
     })
     .catch((error) => console.log("Error:", error));
 }
