@@ -47,6 +47,8 @@ fetchUsers();
 
 if (button) {
   button.addEventListener("click", function () {
+    event.preventDefault(); // Prevent the default form submission behavior
+
     let fullName = document.getElementById("full-name").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;

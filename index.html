@@ -28,27 +28,31 @@
       }
     </style>
   </head>
-  <body>
-    <div
-      class="min-h-screen bg-blue-300 flex flex-col items-center justify-center gap-3"
+  <body class="bg-blue-300">
+    <form
+      action=""
+      class="flex flex-col items-center justify-center gap-3 h-screen"
     >
       <input
         class="border-[1px] border-solid border-purple-500 focus:border-purple-500 rounded-md custom_input"
         type="text"
         placeholder="FullName"
         id="full-name"
+        required
       />
       <input
         class="border-[1px] border-solid border-purple-500 focus:border-purple-500 rounded-md custom_input"
         type="email"
         placeholder="Email"
         id="email"
+        required
       />
       <input
         class="border-[1px] border-solid border-purple-500 focus:border-purple-500 rounded-md custom_input"
         type="password"
         placeholder="Password"
         id="password"
+        required
       />
       <button
         class="pulse inline-block border-[1px] border-solid border-purple-500 focus:border-purple-500 rounded-md custom_input p-[20px] py-[10px] bg-purple-500 text-white hover:bg-transparent hover:text-purple-500"
@@ -57,8 +61,9 @@
       >
         Submit
       </button>
-      <ul id="ul"></ul>
-    </div>
+    </form>
+
+    <!-- <ul id="ul"></ul> -->
     <!-- <script src="./crud.js"></script> -->
     <script src="./my-crud.js"></script>
     <!-- <script src="./server.js"></script> -->
